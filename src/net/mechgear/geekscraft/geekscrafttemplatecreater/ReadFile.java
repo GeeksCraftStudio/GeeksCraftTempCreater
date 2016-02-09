@@ -9,11 +9,12 @@ public class ReadFile {
 	//声明用于保存文件列表的List对象
 	private List<File> fileList= new ArrayList<File>();
 	
-	public ReadFile(String path){
+	ReadFile(String path){
+		//初始化
 		readFile(path);
 	}
 	
-	
+	//获取.minecraft的绝对路径
 	
 	//负责写入的fileList的方法
 	private void readFile(String path){
