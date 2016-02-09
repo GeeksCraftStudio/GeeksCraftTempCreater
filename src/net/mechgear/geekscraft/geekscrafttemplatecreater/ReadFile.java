@@ -10,31 +10,10 @@ public class ReadFile {
 	private List<File> fileList= new ArrayList<File>();
 	
 	public ReadFile(String path){
-		readFile(getPath(path));
+		readFile(path);
 	}
 	
-	private String getPath(String path){
-//		if((path.length()-path.lastIndexOf(".minecraft"))==11){
-//			
-//		}
-		if(path.lastIndexOf(".minecraft") != -1){
-			switch (path.length()-path.lastIndexOf(".minecraft")) {
-				case 11:
-					path = path.substring(0, path.length()-1);
-					break;
-				case 10:
-					break;
-			
-				default:
-					System.out.println("路径不合法");
-					break;
-			}
-		}else{
-			System.out.println("路径不合法");
-		}
-		return path;
-		
-	}
+	
 	
 	//负责写入的fileList的方法
 	private void readFile(String path){
@@ -42,7 +21,7 @@ public class ReadFile {
 		fileReader(root+"/mods", fileList);
 		fileReader(root+"/versions", fileList);
 		fileReader(root+"/libraries", fileList);
-		fileList.add(new File(root+"/launcher_profiles"));
+		fileList.add(new File(root+"/launcher_profiles.json"));
 		
 	}
 	

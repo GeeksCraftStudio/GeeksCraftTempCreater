@@ -9,6 +9,7 @@ import java.util.Map;
 public class ObjectFileWriter {
 
 	static void objectFileWriter(String path,Map<String,String> t){
+		System.out.println("正在写入模板");
 		try {
 			File f = new File(path);
 			FileOutputStream fos = new FileOutputStream(f);
