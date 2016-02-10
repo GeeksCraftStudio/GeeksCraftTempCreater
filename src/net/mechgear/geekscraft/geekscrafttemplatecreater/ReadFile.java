@@ -18,7 +18,7 @@ public class ReadFile {
 	
 	//负责写入的fileList的方法
 	private void readFile(String path){
-		String root = path;
+		String root = path.replace('\\', '/');
 		fileReader(root+"/mods", fileList);
 		fileReader(root+"/versions", fileList);
 		fileReader(root+"/libraries", fileList);

@@ -43,9 +43,9 @@ public class TempCreaterCore {
 	}
 	outPath += src;
 //	String outPath = "H:\\WorkSpace\\Protection\\Temp.temp";
-	
+	String seed = CreateSeed.createSeed();
 	System.out.println("正在生成模板");
-	ObjectFileWriter.objectFileWriter(outPath, new CreateTemplat(path).getTemp());
+	ObjectFileWriter.objectFileWriter(outPath, new CreateTemplat(path,seed).getTemp());
 	System.out.println("模板生成成功");
 	}
 }
